@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $trains = Train::all();
+        $trains = Train::where('data', date('Y-m-d'))->get();
         return view('home', compact('trains'));
     }
 }
