@@ -46,9 +46,11 @@ class TrainsTableSeeder extends Seeder
             $new_train->save();
 
         } */
-
+        
         $path = __DIR__.'/trains.csv';
         $trains = Help::getCsvTrains($path);
+
+
 
         foreach ($trains as $index=> $train) {
             if($index !== 0){

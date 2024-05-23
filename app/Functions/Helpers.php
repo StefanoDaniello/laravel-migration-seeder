@@ -13,10 +13,10 @@ class Helpers
         }
 
         $trains = [];
-        while($row = fgetcsv($file_steam)) {
+        while($row = fgetcsv($file_steam)){
             $trains[] = $row;
         }
-        dd($trains);
+        // dd($trains);
         return $trains;
     }
 }
