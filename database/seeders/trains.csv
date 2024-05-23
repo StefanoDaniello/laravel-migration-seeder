@@ -1,0 +1,12 @@
+azienda,stazione_di_partenza,stazione_di_arrivo,orario_di_partenza,orario_di_arrivo,Codice_Treno,Numero_Carrozze,data,In_orario,Cancellato
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,0,1
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-26,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,0,1
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,0,1
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-20,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-29,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-25,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-21,1,0
+Italo,Milano-Centrale,Bologna-Centrale,10:09,14:06,56830,12,2024-05-23,0,1

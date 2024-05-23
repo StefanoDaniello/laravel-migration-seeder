@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Train;
 use Faker\Generator as Faker;
+use App\Functions\Helpers as Help;
 class TrainsTableSeeder extends Seeder
 {
     /**
@@ -13,7 +14,7 @@ class TrainsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $today = date('Y-m-d');
+        /* $today = date('Y-m-d');
         $nextDay = date('Y-m-d', strtotime('+1 day'));
         for($index = 0; $index < 10; $index++){
             $new_train = new Train();
@@ -44,6 +45,28 @@ class TrainsTableSeeder extends Seeder
             $new_train->data = $faker->dateTimeBetween($today, $nextDay);
             $new_train->save();
 
+        } */
+
+        $path = __DIR__.'/trains.csv';
+        $trains = Help::getCsvTrains($path);
+
+        foreach ($trains as $index=> $train) {
+            if($index !== 0){
+                $new_train = new Train();
+                $new_train->azienda = $train[0];
+                $new_train->stazione_di_partenza = $train[1];
+                $new_train->stazione_di_arrivo = $train[2];
+                $new_train->orario_di_partenza = $train[3];
+                $new_train->orario_di_arrivo = $train[4];
+                $new_train->Codice_Treno = $train[5];
+                $new_train->Numero_Carrozze = $train[6];
+                $new_train->data = $train[7];
+                $new_train->In_orario = $train[8];
+                $new_train->Cancellato = $train[9];
+                $new_train->save();
+            }
         }
+
+
     }
 }
