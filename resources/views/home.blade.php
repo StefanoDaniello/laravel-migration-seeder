@@ -17,23 +17,29 @@
 
 <body>
 
-    <div>Treni in partenza oggi</div>
+    <div>Treni in partenza del {{ date('Y-m-d') }} </div>
 
     @foreach ($trains as $train)
         <ul>
-            <li>{{ $train->azienda }}</li>
-            <li>{{ $train->stazione_di_partenza }}</li>
-            <li>{{ $train->orario_di_partenza }}</li>
-            <li>{{ $train->stazione_di_arrivo }}</li>
-            <li>{{ $train->orario_di_arrivo }}</li>
-            <li>{{ $train->Codice_Treno }}</li>
-            <li>{{ $train->Numero_carrozze }}</li>
-            <li>{{ $train->In_orario }}</li>
-            <li>{{ $train->Cancellato }}</li>
-            <li>{{ $train->data }}</li>
+            <li> Azienda:{{ $train->azienda }}</li>
+            <li> Stazione di partenza:{{ $train->stazione_di_partenza }}</li>
+            <li> Orario di Partenza:{{ $train->orario_di_partenza }}</li>
+            <li> Stazione di arrivo: {{ $train->stazione_di_arrivo }}</li>
+            <li> Orario di arrivo: {{ $train->orario_di_arrivo }}</li>
+            <li> Codice Treno: {{ $train->Codice_Treno }}</li>
+            <li> Numero Carrozze: {{ $train->Numero_carrozze }}</li>
+            <li>
+                @if ($train->In_orario == 1)
+                    In orario
+                @elseif($train->Cancellato == 1)
+                    Treno Cancellato  
+                @endif
+            </li>
+            <li>Data: {{ $train->data }}</li>
         </ul>
     @endforeach
 
 </body>
 
 </html>
+
